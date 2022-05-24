@@ -30,6 +30,16 @@ body {
     color: white;
 }
 
+.estiloGeralBotoes--filtrarPanificadora {
+    background-color: rgb(162, 175, 45);
+    color: white;
+}
+
+.estiloGeralBotoes--filtrarLaticínio {
+    background-color: rgba(66, 175, 170, 0.808);
+    color: white;
+}
+
 .containerBuscaPorNome {
     display: flex;
     justify-content: space-between;
