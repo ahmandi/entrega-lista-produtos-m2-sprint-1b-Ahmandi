@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <script defer src="https://kit.fontawesome.com/50d5be17a9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/style.css">
     <title>Lista de Produtos</title>
@@ -13,29 +15,58 @@
     <!-- CABEÇALHO -->
     <header>
         <div id="filters" class="filtersContainer">
-            
-            <button class="estiloGeralBotoes estiloGeralBotoes--mostrarTodos">Mostrar Todos</button>
-            <button class="estiloGeralBotoes estiloGeralBotoes--filtrarHortifruti">Mostrar Hortifruti</button>
-            <button class="estiloGeralBotoes estiloGeralBotoes--filtrarPanificadora">Mostrar Panificadora</button>
-            <button class="estiloGeralBotoes estiloGeralBotoes--filtrarLaticínio">Mostrar Laticínio</button>
-            
+
+            <button class="estiloGeralBotoes estiloGeralBotoes--mostrarTodos">Todos Produtos</button>
+            <button class="estiloGeralBotoes estiloGeralBotoes--filtrarHortifruti">Hortifruti</button>
+            <button class="estiloGeralBotoes estiloGeralBotoes--filtrarPanificadora">Panificadora</button>
+            <button class="estiloGeralBotoes estiloGeralBotoes--filtrarLaticínio">Laticínios</button>
+        </div>
+         
             <div class="containerBuscaPorNome">
                 
-                <input type="text" placeholder="Nome do produto" class="campoBuscaPorNome">
-                <button class="estiloGeralBotoes estiloGeralBotoes--botaoBuscaPorNome">Buscar</button>
-
+                <input type="text" placeholder="Pesquisar Por" class="campoBuscaPorNome">
+                <button class="estiloGeralBotoes estiloGeralBotoes--botaoBuscaPorNome"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
-        </div>
     </header>
     
     <main>
         <div class="containerListaProdutos" id="listProdutos">
             <ul></ul>
         </div>
-
-        <div class="containerPrecoTotal">
-            <p>Preço total: R$<span id="precoTotal">00.00</span></p>
-        </div>
+        <section class="cart">
+            <div class="cart__title">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p>Carrinho</p>
+            </div>
+            <div class="cart__checkout--window">
+                <div class="cart__checkout--product">
+                        <!-- <div class="product__container">
+                            <!-- <img src="./src/img/banana.png" alt="" class="product__img"> -->
+                            <!-- <div class="cart_checkout--product--info"> -->
+                                <!-- <h3 class="product__name">Banana</h3>
+                                <p class="product__type">Hortifruti</p>
+                                <span class="product__price">R$ 2,00</span>
+                            </div>
+                        </div>
+                        <!-- <button class='trash'><i class="fa-solid fa-trash trash"></i></button> -->
+                </div>
+            </div>
+            <section class="cart__checkout--values">
+                <div class="cart__checkout--positioning qty">
+                    <div class="quantity--title">Quantidade</div>
+                    <div class="quantity--value">0</div>
+                </div>
+                <div class="cart__checkout--positioning total">
+                    <div class="totalPrice--title">Total</div>
+                    <div class="totalPrice--value">R$
+                        <div class="totalValue"></div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- <div class="containerPrecoTotal">
+            <p>Preço total: <span id="precoTotal">00.00</span></p>
+        </div> -->
     </main>
 
     <script src="src/js/dataProdutos.js"></script>
